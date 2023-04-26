@@ -1,25 +1,36 @@
-<canvas width="600" height="400">
-
-</canvas>
+<canvas width="600" height="400"> </canvas>
 <script>
-    //Conexión de javascripts y etiquetas canvas
-    //Función que conecta etiquetas html con información de acciones que quiero hacer de Js
-    //variable de nombre PANTALLA
-    var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");
-    //---------BANDERA------------------
-    //Funcion para rellenar el rectangulo
-    //Style rectangulo de canvas
-    pincel.fillStyle = "lightgrey"//Propiedad
-    //Se insertan 4 parámetros (x=0,y=0,max_x=600,max_y=400)
-     pincel.fillRect(0,0,600,400);//Función
-     //Segunda función
-     pincel.fillStyle="green";
-     pincel.fillRect(0,0,200,400);
+  //Conexión de javascripts y etiquetas canvas
+  //Función que conecta etiquetas html con información de acciones que quiero hacer de Js
+  //variable de nombre PANTALLA
+  var pantalla = document.querySelector("canvas");
+  var pincel = pantalla.getContext("2d");
+  //---------BANDERA------------------
+  //Funcion para rellenar el rectangulo
+  //Style rectangulo de canvas
+  pincel.fillStyle = "lightgrey"; //Propiedad
+  //Se insertan 4 parámetros (x=0,y=0,max_x=600,max_y=400)
+  pincel.fillRect(0, 0, 600, 400); //Función
+  //Segunda función
+  pincel.fillStyle = "green";
+  pincel.fillRect(0, 0, 200, 400);
 
-     pincel.fillStyle="red";
-     pincel.fillRect(400,0,200,400);
+  pincel.fillStyle = "red";
+  pincel.fillRect(400, 0, 200, 400);
 
-    
+  pincel.fillStyle = "yellow"; //propiedad
+  //Inicio de un nuevo camino
+  pincel.beginPath();
+  pincel.moveTo(300, 200); //Desplazarte a esa coordenada
+  //Instrucción de lo que va a hacer el pincel
+  pincel.lineTo(200, 400);
+  pincel.lineTo(400, 400);
+  pincel.fill(); //Función de rellenar
+
+  pincel.fillStyle = "blue"; //propiedad
+  //Inicio de un nuevo camino
+  pincel.beginPath();
+  //parametros arc(pos_ini,pos_ini,tamaño_radio,angulo_ini,angulo_fin)
+  pincel.arc(300, 200, 50, 0, 2 * 3.14); //Función para graficar circunferencias
+  pincel.fill(); //Función de rellenar
 </script>
-
